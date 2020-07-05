@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Requests]
 (
-	[Id] INT NOT NULL,
+	[Id] INT NOT NULL IDENTITY(1,1),
 	[ApplicationId] INT NOT NULL,
 	[Title] NVARCHAR(256) NOT NULL,
 	[Email] NCHAR(128) NOT NULL,

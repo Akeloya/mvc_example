@@ -76,7 +76,7 @@ namespace WebApplication.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Request>> PostRequest(Request request)
+        public async Task<ActionResult<Request>> PostRequest([FromForm] Request request)
         {
             _context.Requests.Add(request);
             await _context.SaveChangesAsync();
