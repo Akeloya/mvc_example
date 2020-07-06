@@ -25,8 +25,8 @@
                     <tr>
                         <th scope="col">Название</th>
                         <th scope="col">Приложение</th>
-                        <th scope="col">Дата окончания</th>
                         <th scope="col">Email</th>
+                        <th scope="col">Дата окончания</th>
                         <th scope="col">Описание</th>
                     </tr>
                 </thead>
@@ -35,11 +35,6 @@
             </table>
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
                 </ul>
             </nav>
         </div>
@@ -57,21 +52,21 @@
                         <div class="modal-body">
                             <div class="form-group">
                                 <label for="requestTitle">Название</label>
-                                <input type="text" class="form-control" id="requestTitle" required/>
+                                <input type="text" class="form-control" id="requestTitle" required />
                             </div>
                             <div class="form-group">
                                 <label for="requestApp">Приложение</label>
-                                <select id="requestApp" class="form-control" required></select>                                
+                                <select id="requestApp" class="form-control" required></select>
                             </div>
                             <div class="form-group">
                                 <label for="requestDate">Дата окончания разработки</label>
-                                <input type="text" class="form-control" id="requestDate" required/>
+                                <input type="text" class="form-control" id="requestDate" required />
                             </div>
                             <div class="form-group">
                                 <label for="requestEmail">Ваш e-mail</label>
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="inputGroupPrepend">&#x40;</span>
-                                    <input type="email" class="form-control" id="requestEmail" placeHolder="mailname@domain.ru" required/>
+                                    <input type="email" class="form-control" id="requestEmail" placeHolder="mailname@domain.ru" required />
                                 </div>
                                 <div class="invalid-feedback">
                                     Введите корректный e-mail
@@ -79,7 +74,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="requestDesc">Описание</label>
-                                <input type="text" class="form-control" id="requestDesc" />
+                                <textarea class="form-control" id="requestDesc" rows="5"></textarea>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -91,7 +86,8 @@
             </div>
         </div>
     </div>
-        
-    <script src="~/Scripts/Index.js" type="text/javascript"></script>
+    <input type="hidden" id="requestsData" />
+    <input type="hidden" id="appsData" />
+    <script src="~/js/indexPage.js" type="text/javascript"></script>
 </body>
 </html>
